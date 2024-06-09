@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/dang-nhap-style.css" />
+    <title>Đăng Nhập</title>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v20.0"
+      nonce="g1bPPoVo"
+    ></script>
+    <div id="container">
+      <header>
+        <div class="menu-login">
+          <ul>
+            <li><a class="li-1" href="dang-nhap.html">Đăng nhập</a></li>
+            <li><a class="li-1" href="dang-ky.html">Đăng ký</a></li>
+            <li>
+              <a class="li-1" href="quen-mat-khau.html">Quên mật khẩu</a>
+            </li>
+          </ul>
+        </div>
+        <div class="tittle">
+          <h1><b>FPT P</b>olytechnic</h1>
+          <hr />
+          <h3>THỰC HỌC - THỰC NGHIỆM</h3>
+        </div>
+      </header>
+      <nav>
+        <ul class="menu-bar">
+          <li><a href="../trang-chu.html">TRANG CHỦ</a></li>
+          <li><a href="about.html">GIỚI THIỆU</a></li>
+          <li>
+            <a href="lien-he.html">LIÊN HỆ</a>
+            <ul>
+              <li><a href="#">Mobile</a></li>
+              <li><a href="#">Email</a></li>
+            </ul>
+          </li>
+          <li><a href="feed-back.html">GÓP Ý</a></li>
+          <li><a href="hoi-dap.html">HỎI ĐÁP</a></li>
+          <div class="language">
+            <li><a href="#">ENGLISH</a></li>
+            <li><a href="#">TIẾNG VIỆT</a></li>
+          </div>
+        </ul>
+      </nav>
+      <section>
+        <aside>
+          <div class="box-content">
+            <div class="title-content">
+              <h2>Thư Viện</h2>
+              <nav>
+                <ul>
+                  <li>
+                    <a href="#cong-nghe-thong-tin">Công Nghệ Thông Tin</a>
+                  </li>
+                  <li><a href="#marketing">Marketing</a></li>
+                  <li><a href="#dien-tu-co-khi">Điện Tử - Cơ Khí</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="title-content">
+              <h2>Danh mục sản phẩm</h2>
+            </div>
+            <ul>
+              <li>
+                <a href="../user/layout/trang-san-pham.html"
+                  >Máy tính xách tay</a
+                >
+              </li>
+              <li><a href="#">Điện thoại di động</a></li>
+              <li><a href="#">Máy quay phim</a></li>
+              <li><a href="#">Máy ảnh</a></li>
+            </ul>
+          </div>
+        </aside>
+        <article>
+          <div class="login-container">
+            <form>
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" /> Remember
+                  me?
+                </label>
+              </div>
+              <div class="form-group">
+                <a href="/admin/index.html">
+                  <button type="button" class="form-button">Login</button></a
+                >
+                <br />
+                <hr />
+                <button type="reset" class="reset-button">Reset</button>
+              </div>
+              <br />
+              <div class="forget-password">
+                <a href="quen-mat-khau.html">Forget password</a>
+              </div>
+              <div class="facebook">
+                <div
+                  class="fb-login-button"
+                  data-width=""
+                  data-max-rows=""
+                  data-size="medium"
+                  data-button-type="continue_with"
+                  data-layout=""
+                  data-auto-logout-link="true"
+                  data-use-continue-as="false"
+                ></div>
+              </div>
+            </form>
+          </div>
+        </article>
+      </section>
+      <footer>
+        <h3>FPT POLYTECHNIC © 2024. ALL RIGHTS RESERVED</h3>
+      </footer>
+    </div>
+  </body>
+</html>

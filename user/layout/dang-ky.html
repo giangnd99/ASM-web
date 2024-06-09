@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/dang-ky-style.css" />
+    <title>Đăng Ký</title>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <div class="menu-login">
+          <ul>
+            <li><a class="li-1" href="dang-nhap.html">Đăng nhập</a></li>
+            <li><a class="li-1" href="dang-ky.html">Đăng ký</a></li>
+            <li><a class="li-1" href="quen-mat-khau.html">Quên mật khẩu</a></li>
+          </ul>
+        </div>
+        <div class="tittle">
+          <h1><b>FPT P</b>olytechnic</h1>
+          <hr />
+          <h3>THỰC HỌC - THỰC NGHIỆM</h3>
+        </div>
+      </header>
+      <nav>
+        <ul class="menu-bar">
+          <li><a href="../trang-chu.html">TRANG CHỦ</a></li>
+          <li><a href="about.html">GIỚI THIỆU</a></li>
+          <li>
+            <a href="lien-he.html">LIÊN HỆ</a>
+            <ul>
+              <li><a href="#">Mobile</a></li>
+              <li><a href="#">Email</a></li>
+            </ul>
+          </li>
+          <li><a href="feed-back.html">GÓP Ý</a></li>
+          <li><a href="hoi-dap.html">HỎI ĐÁP</a></li>
+          <div class="language">
+            <li><a href="#">ENGLISH</a></li>
+            <li><a href="#">TIẾNG VIỆT</a></li>
+          </div>
+        </ul>
+      </nav>
+      <section>
+        <aside>
+          <div class="box-content">
+            <div class="title-content">
+              <h2>Thư Viện</h2>
+              <nav>
+                  <ul>
+                      <li><a href="#cong-nghe-thong-tin">Công Nghệ Thông Tin</a></li>
+                      <li><a href="#marketing">Marketing</a></li>
+                      <li><a href="#dien-tu-co-khi">Điện Tử - Cơ Khí</a></li>
+                  </ul>
+              </nav>
+          </div>
+            <div class="title-content">
+              <h2>Danh mục sản phẩm</h2>
+            </div>
+            <ul>
+              <li>
+                <a href="../user/layout/trang-san-pham.html"
+                  >Máy tính xách tay</a
+                >
+              </li>
+              <li><a href="#">Điện thoại di động</a></li>
+              <li><a href="#">Máy quay phim</a></li>
+              <li><a href="#">Máy ảnh</a></li>
+            </ul>
+          </div>
+        </aside>
+        <article>
+          <div class="register-container">
+            <form>
+              <fieldset>
+                <legend>Thông tin cá nhân</legend>
+                <div class="form-group">
+                  <label for="name">Họ và tên:</label>
+                  <input class="form-control" id="name" type="text" />
+                </div>
+                <div class="form-group">
+                  <label for="dob">Ngày sinh:</label>
+                  <input class="form-control" id="dob" type="date" />
+                </div>
+                <div class="form-group">
+                  <label for="score">Điểm:</label>
+                  <input
+                    class="form-control"
+                    id="score"
+                    type="number"
+                    min="0"
+                    max="10"
+                    step="0.25"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="job">Nghề nghiệp:</label>
+                  <input
+                    class="form-control"
+                    id="job"
+                    type="text"
+                    list="job-list"
+                  />
+                  <datalist id="job-list">
+                    <option value="Giáo viên">Giáo viên</option>
+                    <option value="Kỹ sư">Kỹ sư</option>
+                    <option value="Bác sĩ">Bác sĩ</option>
+                    <option value="Luật sư">Luật sư</option>
+                    <option value="Kế toán">Kế toán</option>
+                  </datalist>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Giới tính</legend>
+                <div class="form-group">
+                  <input type="radio" name="gender" id="male" value="male" />
+                  <label for="male">Nam</label>
+                  <input
+                    type="radio"
+                    name="gender"
+                    id="female"
+                    value="female"
+                  />
+                  <label for="female">Nữ</label>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Sở thích</legend>
+                <div class="form-group">
+                  <input
+                    type="checkbox"
+                    id="reading"
+                    name="interests"
+                    value="reading"
+                  />
+                  <label for="reading">Đọc sách</label>
+                  <input
+                    type="checkbox"
+                    id="traveling"
+                    name="interests"
+                    value="traveling"
+                  />
+                  <label for="traveling">Du lịch</label>
+                  <input
+                    type="checkbox"
+                    id="exercise"
+                    name="interests"
+                    value="exercise"
+                  />
+                  <label for="exercise">Thể thao</label>
+                  <input
+                    type="checkbox"
+                    id="food"
+                    name="interests"
+                    value="food"
+                  />
+                  <label for="food">Ẩm thực</label>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="form-group">
+                  <label for="notes">Ghi chú</label>
+                  <textarea id="notes" class="form-control textarea"></textarea>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="form-group">
+                  <button type="button" class="form-button register">
+                    Đăng ký
+                  </button>
+                  <button type="button" class="form-button reset">
+                    Nhập lại
+                  </button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </article>
+      </section>
+      <footer>
+        <h3>FPT POLYTECHNIC © 2024. ALL RIGHTS RESERVED</h3>
+      </footer>
+    </div>
+  </body>
+</html>

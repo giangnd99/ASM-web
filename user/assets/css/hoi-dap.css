@@ -1,0 +1,343 @@
+* {
+    box-sizing: border-box;
+  }
+  /* Container */
+  #container {
+    width: 1200px;
+    margin: auto;
+  }
+  
+  /* Body */
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+  }
+  
+  /* Footer */
+  footer {
+    border-top: 5px double orangered;
+    clear: both;
+    text-align: center;
+    height: 100px;
+    background-color: rgb(246, 206, 133);
+    line-height: 100px;
+  }
+  
+  /* Phần Header */
+  header {
+    position: relative;
+    background-image: url("../image/backgroundjpg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    overflow: hidden; /* Đảm bảo hình nền không bị tràn */
+  }
+  
+  /* Tiêu đề */
+  .tittle {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Canh giữa tiêu đề */
+    text-align: center;
+    color: #fff;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Đổ bóng cho tiêu đề */
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Đổ bóng cho mô tả */
+  }
+  
+  /* Hiệu ứng cho tiêu đề */
+  .tittle h1,
+  .tittle hr {
+    animation: slideIn 1s forwards; /* Hiệu ứng trượt vào */
+    opacity: 1; /* Bắt đầu ẩn đi */
+  }
+  
+  .tittle h3 {
+    animation: slideIn 1s forwards 0.5s; /* Trượt vào sau 0.5s */
+    opacity: 1;
+  }
+  
+  /* Hiệu ứng keyframes */
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Menu Bar */
+  .menu-bar {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    max-width: 100%;
+    height: 50px;
+    margin-top: 0;
+    background-color: orangered;
+    justify-content: space-evenly;
+    justify-content: flex-start; /* Dồn menu-bar về phía bên trái */
+  }
+  
+  .menu-bar li {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .menu-bar a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    line-height: 50px;
+    font-variant: small-caps;
+    padding: 0 15px;
+  }
+  
+  .menu-bar a:hover {
+    color: black;
+    background-color: wheat;
+    box-shadow: 3px 3px 7px orangered;
+    text-decoration: underline;
+  }
+  
+  /* Dropdown Menu */
+  .menu-bar ul {
+    position: absolute;
+    display: none;
+    border-radius: 3px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: white;
+    box-shadow: 0 0 1px gray;
+  }
+  
+  .menu-bar li:hover ul {
+    display: block;
+    position: absolute;
+    z-index: 2;
+  }
+  
+  .menu-bar li ul a {
+    display: block;
+    color: orangered;
+    box-shadow: none;
+  }
+  
+  .menu-bar li ul a:hover {
+    color: yellow;
+    text-decoration: underline;
+    font-size: 1.2rem;
+  }
+  
+  /* Phần Menu Login */
+  .menu-login {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .menu-login ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-login ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .menu-login ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu-login ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  .language {
+    width: auto; /* Thiết lập chiều rộng tự động */
+    margin-left: auto; /* Dồn phần language về bên phải */
+  }
+  
+  article .box-content,
+  aside .box-contents {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  /* Article */
+  article {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    float: left;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+  }
+  article .container-product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .title-content h2 {
+    font-size: 2.5rem;
+    color: rgba(136, 135, 122, 0.647);
+    text-decoration: dotted;
+    text-shadow: 0px 0px 5px rgba(255, 191, 0, 0.37);
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+  }
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* FAQ section styling */
+#faq {
+    background: #f9f9f9;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#faq h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+/* FAQ item styling */
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    text-align: left;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background-color: orangered;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item input[type="text"] {
+    width: 90% ;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.faq-submit {
+    display: block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.faq-submit:hover {
+    background-color: #218838;
+}
+/* Aside */
+aside ul {
+    width: 100%;
+    height: auto;
+    list-style-type: none;
+    background-color: white;
+  }
+  
+  aside {
+    float: right;
+    width: 25%;
+    height: auto;
+    padding-left: 1%;
+    padding-top: 0;
+    list-style-type: none;
+    border-radius: 3px;
+    box-shadow: 0 2px gray;
+    position: relative;
+  }
+  
+  aside a {
+    background: url("../image/icon-1-smaller.jpg") no-repeat 10px center;
+    display: block;
+    border-bottom: 1px dotted orangered;
+    color: orangered;
+    font-variant: small-caps;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 8px 5px 8px 30px;
+  }
+  
+  aside a:hover {
+    background: url("../image/icon-2-smaller.jpg") no-repeat 10px center;
+    border-bottom: 1px dotted white;
+    background-color: orangered;
+    color: white;
+    font-weight: bold;
+  }
+  

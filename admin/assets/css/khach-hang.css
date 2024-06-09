@@ -1,0 +1,159 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+#container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Phần Header */
+.horizontal-header {
+  display: flex;
+  justify-content: space-between;
+  max-height: 10%;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  width: 320px;
+  height: 50px;
+}
+.logo h1 {
+  color: chocolate;
+  font-size: 2rem;
+  position: absolute;
+  display: block;
+  animation: move 5s linear infinite alternate;
+}
+/* Hiệu ứng động */
+@keyframes move {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(75%);
+  }
+}
+
+.horizontal-nav ul,
+.menu-login ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.horizontal-nav a,
+.menu-login a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.horizontal-nav a:hover,
+.menu-login a:hover {
+  color: #ff6600;
+}
+
+.horizontal-nav a::after,
+.menu-login a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #ff6600;
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
+}
+
+.horizontal-nav a:hover::after,
+.menu-login a:hover::after {
+  width: 100%;
+  left: 0;
+  background-color: #ff6600;
+}
+/* session */
+/* khách hàng */
+table {
+  margin: 5% 20%;
+  border-collapse: collapse;
+  width: 70%;
+  line-height: 30px;
+}
+caption {
+  max-width: 100%;
+  font-weight: bold;
+  font-size: 2rem;
+  color: rgba(188, 175, 34, 0.884);
+  margin-bottom: 20px;
+}
+th,
+td {
+  border: 2px solid black;
+}
+thead tr {
+  background-color: grey;
+}
+tbody tr:nth-child(2n) {
+  color: white;
+  background-color: gray;
+}
+tbody tr:nth-child(2n + 1) {
+  color: black;
+  background-color: white;
+}
+tfoot tr {
+  color: white;
+  background-color: rgba(36, 34, 34, 0.673);
+}
+/* khách hàng */
+tbody td button {
+  display: flexbox;
+  margin: 5px 10px;
+  border-radius: 3px;
+}
+tbody td button:hover {
+  box-shadow: 0px 0px 5px aqua;
+}
+input:disabled {
+  background: none;
+  color: black;
+  cursor: not-allowed;
+}
+/* Phần footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Hiệu ứng động */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

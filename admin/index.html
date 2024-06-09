@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../admin/assets/css/index-style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var canvas = document.getElementById("salesChart");
+        var ctx = canvas.getContext("2d");
+
+        // Dữ liệu cho biểu đồ
+        var data = [20, 30, 40, 50, 25, 35];
+
+        // Chiều rộng và khoảng cách giữa các cột
+        var barWidth = 30;
+        var barMargin = 10;
+
+        // Vẽ biểu đồ cột
+        for (var i = 0; i < data.length; i++) {
+          var x = (barWidth + barMargin) * i;
+          var y = canvas.height - data[i]; // Đảo ngược giá trị để biểu diễn cột từ dưới lên
+          ctx.fillStyle = "blue";
+          ctx.fillRect(x, y, barWidth, data[i]);
+        }
+      });
+    </script>
+
+    <header class="horizontal-header">
+      <nav class="horizontal-nav">
+        <div class="nav-right">
+          <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="layout/danh-muc.html">Danh mục sản phẩm</a></li>
+            <li><a href="layout/khach-hang.html">Khách hàng</a></li>
+            <li><a href="layout/don-hang.html">Đơn hàng</a></li>
+            <li><a href="layout/quan-tri-vien.html">Quản trị viên</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="menu-login">
+        <ul>
+          <li><a class="li-1" href="./layout/dang-nhap.html">Đăng nhập</a></li>
+          <li><a class="li-1" href="./layout/dang-ky.html">Đăng ký</a></li>
+          <li>
+            <a class="li-1" href="./layout/quen-mat-khau.html">Quên mật khẩu</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="logo">
+      <h1>TRANG QUẢN TRỊ</h1>
+    </div>
+    <section>
+      <aside></aside>
+      <article>
+        <div class="container">
+          <div class="grid">
+            <div class="card">
+              <h2>Doanh số bán hàng</h2>
+              <canvas id="salesChart" width="200" height="70"></canvas>
+            </div>
+            <a href="layout/don-hang.html">
+              <div class="card">
+                <h2>Đơn hàng mới</h2>
+                <p>100</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="200"
+                  height="200"
+                  fill="currentColor"
+                  class="bi bi-cart"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
+                  />
+                </svg>
+              </div>
+            </a>
+
+            <div class="card">
+              <h2>Sản phẩm bán chạy</h2>
+              <p>50</p>
+              <img
+                src="assets/image/prod/mac-book-pro-macbook-air-laptop-macbook-pro-13-inch-macbook.jpg"
+                width="300"
+                height="200"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="grid">
+            <a href="layout/danh-muc.html">
+              <div class="card">
+                <h2 style="text-align: center">Danh sách sản phẩm</h2>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="500"
+                  height="235"
+                  fill="currentColor"
+                  class="bi bi-shop"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z"
+                  />
+                </svg>
+              </div>
+            </a>
+            <a href="/user/layout/chi-tiet-san-pham.html">
+              <div class="card">
+                <h2>Bình luận</h2>
+                <p>100</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="200"
+                  height="200"
+                  fill="currentColor"
+                  class="bi bi-chat-left-text"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+                  />
+                  <path
+                    d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6m0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"
+                  />
+                </svg>
+              </div>
+            </a>
+            <a href="layout/khach-hang.html">
+            <div class="card">
+              <h2>Khách hàng mới</h2>
+              <p>50</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="200"
+                height="200"
+                fill="currentColor"
+                class="bi bi-person-circle"
+                viewBox="0 0 16 16"
+              >
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                <path
+                  fill-rule="evenodd"
+                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
+                />
+              </svg>
+            </div>
+          </a>
+          </div>
+        </div>
+      </article>
+    </section>
+    <footer>
+      <h3>FPT POLYTECHNIC © 2024. ALL RIGHTS RESERVED</h3>
+    </footer>
+  </body>
+</html>

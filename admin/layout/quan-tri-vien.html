@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/quan-tri-vien.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="horizontal-header">
+    
+      <nav class="horizontal-nav">
+        <div class="nav-right">
+          <ul>
+            <li><a href="../index.html">Trang chủ</a></li>
+            <li><a href="danh-muc.html">Danh mục sản phẩm</a></li>
+            <li><a href="khach-hang.html">Khách hàng</a></li>
+            <li><a href="don-hang.html">Đơn hàng</a></li>
+            <li><a href="quan-tri-vien.html">Quản trị viên</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="menu-login">
+        <ul>
+          <li><a class="li-1" href="dang-nhap.html">Đăng nhập</a></li>
+          <li><a class="li-1" href="dang-ky.html">Đăng ký</a></li>
+          <li>
+            <a class="li-1" href="quen-mat-khau.html">Quên mật khẩu</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="logo">
+      <h1>TRANG QUẢN TRỊ</h1>
+    </div>
+    <section>
+      <aside>
+        <div class="user-profile">
+          <img
+            src="../assets/image/profile/giang-ava.jpg"
+            alt="Avatar"
+            class="avatar"
+          />
+          <p class="username">username</p>
+          <br />
+          <span>
+            <input type="text" value="giangnd" readonly />
+            <button type="button">Sửa tên</button>
+          </span>
+        </div>
+      </aside>
+      <article>
+        <h2>Thông Tin Quản Trị Viên</h2>
+        <form action="/submit-admin" method="post">
+          <div class="form-group">
+            <label for="adminName">Tên Quản Trị Viên:</label>
+            <input type="text" id="adminName" name="adminName"  value="Nguyễn Đằng Giang" readonly />
+          </div>
+          <div class="form-group">
+            <label for="adminEmail">Email:</label>
+            <input type="email" id="adminEmail" name="adminEmail" value="nguyendanggiang@gmail.com" readonly required />
+          </div>
+          <div class="form-group">
+            <label for="adminPhone">Số Điện Thoại:</label>
+            <input type="tel" id="adminPhone" name="adminPhone" value="0779755777" readonly required />
+          </div>
+          <div class="form-group">
+            <label for="adminRole">Quyền Truy Cập:</label>
+            <select id="adminRole" name="adminRole" disabled>
+              <option value="superadmin">Super Admin</option>
+              <option value="admin">Admin</option>
+              <option value="moderator">Moderator</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <a href="dang-ky.html"><button type="button" name="add-admin">Thêm</button></a>
+          </div>
+        </form>
+      </article>
+    </section>
+    <footer>
+      <h3>FPT POLYTECHNIC © 2024. ALL RIGHTS RESERVED</h3>
+    </footer>
+  </body>
+</html>

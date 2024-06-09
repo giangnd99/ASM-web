@@ -1,0 +1,155 @@
+/* Phần Header */
+header {
+  position: relative;
+  background-image: url("../image/backgroundjpg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  overflow: hidden; /* Đảm bảo hình nền không bị tràn */
+}
+
+/* Tiêu đề */
+.tittle {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* Canh giữa tiêu đề */
+  text-align: center;
+  color: #fff;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Đổ bóng cho tiêu đề */
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Đổ bóng cho mô tả */
+}
+
+/* Hiệu ứng cho tiêu đề */
+.tittle h1,
+.tittle hr {
+  animation: slideIn 1s forwards; /* Hiệu ứng trượt vào */
+  opacity: 0; /* Bắt đầu ẩn đi */
+}
+
+.tittle h3 {
+  animation: slideIn 1s forwards 0.5s; /* Trượt vào sau 0.5s */
+  opacity: 0;
+}
+
+/* Hiệu ứng keyframes */
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Menu Bar */
+.menu-bar {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  max-width: 100%;
+  height: 50px;
+  margin-top: 0;
+  background-color: orangered;
+  justify-content: space-evenly;
+  justify-content: flex-start; /* Dồn menu-bar về phía bên trái */
+}
+
+.menu-bar li {
+  display: inline-block;
+  position: relative;
+}
+
+.menu-bar a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  line-height: 50px;
+  font-variant: small-caps;
+  padding: 0 15px;
+}
+
+.menu-bar a:hover {
+  color: black;
+  background-color: wheat;
+  box-shadow: 3px 3px 7px orangered;
+  text-decoration: underline;
+}
+
+/* Dropdown Menu */
+.menu-bar ul {
+  position: absolute;
+  display: none;
+  border-radius: 3px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: white;
+  box-shadow: 0 0 1px gray;
+}
+
+.menu-bar li:hover ul {
+  display: block;
+  position: absolute;
+  z-index: 2;
+}
+
+.menu-bar li ul a {
+  display: block;
+  color: orangered;
+  box-shadow: none;
+}
+
+.menu-bar li ul a:hover {
+  color: yellow;
+  text-decoration: underline;
+  font-size: 1.2rem;
+}
+
+/* Phần Menu Login */
+.menu-login {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.menu-login ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-login ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.menu-login ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.menu-login ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.language {
+  width: auto; /* Thiết lập chiều rộng tự động */
+  margin-left: auto; /* Dồn phần language về bên phải */
+}
